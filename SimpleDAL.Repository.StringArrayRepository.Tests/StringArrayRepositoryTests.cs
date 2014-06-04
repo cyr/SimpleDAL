@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SimpleDAL
 {
     [TestClass]
-    public class RepositoryTests
+    public class StringArrayRepositoryTests
     {
         private readonly string[] _sourceStringData = { "some data", "1" };
         private readonly string[] _singleEntrySourceData = new string[0];
@@ -32,7 +32,7 @@ namespace SimpleDAL
         {
             var repo = new StringArrayRepository<string>(_sourceStringData);
 
-            var count = repo.Where(s => s.Length == 1).Count();
+            int count = repo.Where(s => s.Length == 1).Count();
 
             Assert.AreEqual(1, count);
         }
@@ -62,8 +62,8 @@ namespace SimpleDAL
         {
             var repo = new StringArrayRepository<string>(_sourceStringData);
 
-            var totalCount = repo.Count();
-            var specificCount = repo.Count(s => s == _sourceStringData[0]);
+            int totalCount = repo.Count();
+            int specificCount = repo.Count(s => s == _sourceStringData[0]);
 
             Assert.AreEqual(_sourceStringData.Length, totalCount);
             Assert.AreEqual(1, specificCount);
