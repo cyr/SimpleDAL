@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SimpleDAL.Repository;
 
 namespace SimpleDAL
 {
-    public class Repository<T> {
+    public class StringArrayRepository<T> : IRepository<T>
+    {
         private readonly T[] _source;
 
-        public Repository(T[] source)
+        public StringArrayRepository(T[] source)
         {
             _source = source;
         }

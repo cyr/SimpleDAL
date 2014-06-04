@@ -7,7 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6010AB90
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Tests", "SimpleDAL.Tests\SimpleDAL.Tests.csproj", "{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL", "SimpleDAL\SimpleDAL.csproj", "{21AC5D54-881B-4423-BC03-84097F925F3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Repository.StringArrayRepository", "SimpleDAL.Repository.StringArrayRepository\SimpleDAL.Repository.StringArrayRepository.csproj", "{21AC5D54-881B-4423-BC03-84097F925F3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstraction", "Abstraction", "{435D3FFE-DF88-4250-B557-FE11E9B37D82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementation", "Implementation", "{7FDEE182-EDEB-4D3F-BE9F-0E79121DFA32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Abstraction", "SimpleDAL.Abstraction\SimpleDAL.Abstraction.csproj", "{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,11 +31,18 @@ Global
 		{21AC5D54-881B-4423-BC03-84097F925F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21AC5D54-881B-4423-BC03-84097F925F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21AC5D54-881B-4423-BC03-84097F925F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285} = {6010AB90-0518-4008-B33D-DEB6847AB466}
+		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D} = {435D3FFE-DF88-4250-B557-FE11E9B37D82}
+		{5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8} = {7FDEE182-EDEB-4D3F-BE9F-0E79121DFA32}
+		{21AC5D54-881B-4423-BC03-84097F925F3F} = {5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8}
 	EndGlobalSection
 EndGlobal

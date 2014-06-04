@@ -12,7 +12,7 @@ namespace SimpleDAL
         [TestMethod]
         public void CreateRepositoryOfType()
         {
-            var repo = new Repository<string>(_sourceStringData);
+            var repo = new StringArrayRepository<string>(_sourceStringData);
 
             Assert.IsNotNull(repo);
         }
@@ -20,7 +20,7 @@ namespace SimpleDAL
         [TestMethod]
         public void SelectFirstValueFromRepository()
         {
-            var repo = new Repository<string>(_sourceStringData);
+            var repo = new StringArrayRepository<string>(_sourceStringData);
 
             var value = repo.Select(s => s).First();
 
@@ -30,7 +30,7 @@ namespace SimpleDAL
         [TestMethod]
         public void GetAllSingleCharStringsFromRepository()
         {
-            var repo = new Repository<string>(_sourceStringData);
+            var repo = new StringArrayRepository<string>(_sourceStringData);
 
             var count = repo.Where(s => s.Length == 1).Count();
 
@@ -40,7 +40,7 @@ namespace SimpleDAL
         [TestMethod, ExpectedException(typeof(System.InvalidOperationException))]
         public void SelectSingleValueFailsFromRepository()
         {
-            var repo = new Repository<string>(_sourceStringData);
+            var repo = new StringArrayRepository<string>(_sourceStringData);
 
             repo.Single(s => true);
 
@@ -50,7 +50,7 @@ namespace SimpleDAL
         [TestMethod]
         public void SelectSingleOrDefaultWithNoValuesInRepo()
         {
-            var repo = new Repository<string>(_singleEntrySourceData);
+            var repo = new StringArrayRepository<string>(_singleEntrySourceData);
 
             var value = repo.SingleOrDefault(s => true);
 
@@ -60,7 +60,7 @@ namespace SimpleDAL
         [TestMethod]
         public void UsingCountOnRepo()
         {
-            var repo = new Repository<string>(_sourceStringData);
+            var repo = new StringArrayRepository<string>(_sourceStringData);
 
             var totalCount = repo.Count();
             var specificCount = repo.Count(s => s == _sourceStringData[0]);

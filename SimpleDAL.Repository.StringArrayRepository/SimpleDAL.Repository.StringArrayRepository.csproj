@@ -39,8 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repository.cs" />
+    <Compile Include="StringArrayRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleDAL.Abstraction\SimpleDAL.Abstraction.csproj">
+      <Project>{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}</Project>
+      <Name>SimpleDAL.Abstraction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
