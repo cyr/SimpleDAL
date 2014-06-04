@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6010AB90-0518-4008-B33D-DEB6847AB466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Tests", "SimpleDAL.Repository.Tests\SimpleDAL.Tests.csproj", "{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Tests", "SimpleDAL.Tests\SimpleDAL.Tests.csproj", "{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL", "SimpleDAL\SimpleDAL.csproj", "{21AC5D54-881B-4423-BC03-84097F925F3F}"
 EndProject
