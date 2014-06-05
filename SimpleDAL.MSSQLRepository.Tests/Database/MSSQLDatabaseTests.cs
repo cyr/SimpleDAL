@@ -1,4 +1,4 @@
-﻿using System.Data.SqlClient;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SimpleDAL.Database
@@ -9,24 +9,11 @@ namespace SimpleDAL.Database
         [TestMethod]
         public void LoadRowFromDatabase()
         {
-            MSSQLDatabase db = new MSSQLDatabase();
+            var db = new MSSQLDatabase(@"mini\sqlexpress");
 
-            MSSQLDatabaseResult result = db.ExecuteQuery("select * from Videos");
-        }
-    }
+            var result = db.ExecuteQuery("select * from Videos");
 
-    public class MSSQLDatabaseResult {}
-
-    public class MSSQLDatabase
-    {
-        public MSSQLDatabaseResult ExecuteQuery(string sqlQuery)
-        {
-            SqlConnection connection = new SqlConnection("");
-
-            var cmd = connection.CreateCommand();
-            cmd.CommandText = sqlQuery;
-
-            var reader = cmd.ExecuteReader();
+            Assert.AreEqual(result.First().First().Value, 1);
         }
     }
 }

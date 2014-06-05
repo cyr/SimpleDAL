@@ -39,6 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\FieldValueTypeMapper.cs" />
+    <Compile Include="Database\MSSQLDatabase.cs" />
+    <Compile Include="Database\MSSQLField.cs" />
+    <Compile Include="Database\MSSQLFieldFactory.cs" />
+    <Compile Include="Database\MSSQLRow.cs" />
     <Compile Include="MSSQLRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
