@@ -4,15 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SimpleDAL
 {
     [TestClass]
-    public class StringArrayRepositoryTests
+    public class MSSQLRepositoryTests
     {
-        private readonly string[] _sourceStringData = { "some data", "1" };
-        private readonly string[] _singleEntrySourceData = new string[0];
-
         [TestMethod]
         public void CreateRepositoryOfType()
         {
-            var repo = new StringArrayRepository<string>(_sourceStringData);
+            var repo = new MSSQLRepository<string>();
 
             Assert.IsNotNull(repo);
         }
@@ -20,17 +17,17 @@ namespace SimpleDAL
         [TestMethod]
         public void SelectFirstValueFromSelectFromRepository()
         {
-            var repo = new StringArrayRepository<string>(_sourceStringData);
+            var repo = new MSSQLRepository<string>();
 
             var value = repo.Select(s => s).First();
 
-            Assert.AreEqual(_sourceStringData.First(), value);
+            Assert.AreEqual("", value);
         }
 
         [TestMethod]
         public void GetAllSingleCharStringsFromRepository()
         {
-            var repo = new StringArrayRepository<string>(_sourceStringData);
+            var repo = new MSSQLRepository<string>();
 
             int count = repo.Where(s => s.Length == 1).Count();
 
@@ -40,7 +37,7 @@ namespace SimpleDAL
         [TestMethod, ExpectedException(typeof(System.InvalidOperationException))]
         public void SelectSingleValueFailsFromRepository()
         {
-            var repo = new StringArrayRepository<string>(_sourceStringData);
+            var repo = new MSSQLRepository<string>();
 
             repo.Single(s => true);
 
@@ -50,7 +47,7 @@ namespace SimpleDAL
         [TestMethod]
         public void SelectSingleOrDefaultWithNoValuesInRepo()
         {
-            var repo = new StringArrayRepository<string>(_singleEntrySourceData);
+            var repo = new MSSQLRepository<string>();
 
             var value = repo.SingleOrDefault(s => true);
 
@@ -60,12 +57,12 @@ namespace SimpleDAL
         [TestMethod]
         public void UsingCountOnRepo()
         {
-            var repo = new StringArrayRepository<string>(_sourceStringData);
+            var repo = new MSSQLRepository<string>();
 
             int totalCount = repo.Count();
-            int specificCount = repo.Count(s => s == _sourceStringData[0]);
+            int specificCount = repo.Count(s => s == "");
 
-            Assert.AreEqual(_sourceStringData.Length, totalCount);
+            Assert.AreEqual(0, totalCount);
             Assert.AreEqual(1, specificCount);
         }
     }

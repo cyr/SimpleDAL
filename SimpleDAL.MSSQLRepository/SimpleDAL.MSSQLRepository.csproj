@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21AC5D54-881B-4423-BC03-84097F925F3F}</ProjectGuid>
+    <ProjectGuid>{E2C2649C-4254-4A5E-B192-F94307BF8FFE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SimpleDAL</RootNamespace>
-    <AssemblyName>SimpleDAL</AssemblyName>
+    <AssemblyName>SimpleDAL.MSSQLRepository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,13 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StringArrayRepository.cs" />
+    <Compile Include="MSSQLRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleDAL.Abstraction\SimpleDAL.Abstraction.csproj">
       <Project>{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}</Project>
-      <Name>SimpleDAL.Abstraction</Name>
+      <Name>SimpleDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

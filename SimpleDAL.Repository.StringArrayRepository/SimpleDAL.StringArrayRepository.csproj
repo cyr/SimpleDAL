@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}</ProjectGuid>
+    <ProjectGuid>{21AC5D54-881B-4423-BC03-84097F925F3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SimpleDAL</RootNamespace>
-    <AssemblyName>SimpleDAL.Tests</AssemblyName>
+    <AssemblyName>SimpleDAL.StringArrayRepository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,17 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StringArrayRepositoryTests.cs" />
+    <Compile Include="StringArrayRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleDAL.Abstraction\SimpleDAL.Abstraction.csproj">
-      <Project>{8b69a9ec-a44c-4b5c-8b4d-6ea3a2232e3d}</Project>
-      <Name>SimpleDAL.Abstraction</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleDAL.Repository.StringArrayRepository\SimpleDAL.Repository.StringArrayRepository.csproj">
-      <Project>{21ac5d54-881b-4423-bc03-84097f925f3f}</Project>
-      <Name>SimpleDAL.Repository.StringArrayRepository</Name>
+      <Project>{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}</Project>
+      <Name>SimpleDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

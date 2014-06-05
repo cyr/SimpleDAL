@@ -1,46 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SimpleDAL
 {
-    public class StringArrayRepository<T> : IRepository<T>
+    public class MSSQLRepository<T> : IRepository<T>
     {
-        private readonly T[] _source;
-
-        public StringArrayRepository(T[] source)
-        {
-            _source = source;
-        }
-
         public IEnumerable<T> Select(Func<T, T> func)
         {
-            return _source.Select(func);
+            throw new NotImplementedException();
         }
 
         public IEnumerable<T> Where(Func<T, bool> func)
         {
-            return _source.Where(func);
+            throw new NotImplementedException();
         }
 
         public T Single(Func<T, bool> func)
         {
-            return _source.Single(func);
+            throw new NotImplementedException();
         }
 
         public T SingleOrDefault(Func<T, bool> func)
         {
-            return _source.SingleOrDefault(func);
+            throw new NotImplementedException();
         }
 
         public int Count()
         {
-            return _source.Count();
+            throw new NotImplementedException();
         }
 
         public int Count(Func<T, bool> func)
         {
-            return _source.Count(func);
+            throw new NotImplementedException();
         }
     }
 }

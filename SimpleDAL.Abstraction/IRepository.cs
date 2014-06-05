@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SimpleDAL.Repository
+namespace SimpleDAL
 {
     public interface IRepository<T> {
         IEnumerable<T> Select(Func<T, T> func);
