@@ -5,21 +5,17 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6010AB90-0518-4008-B33D-DEB6847AB466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringArrayRepository.Tests", "SimpleDAL.Repository.StringArrayRepository.Tests\SimpleDAL.StringArrayRepository.Tests.csproj", "{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringArrayRepository", "SimpleDAL.Repository.StringArrayRepository\SimpleDAL.StringArrayRepository.csproj", "{21AC5D54-881B-4423-BC03-84097F925F3F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstraction", "Abstraction", "{435D3FFE-DF88-4250-B557-FE11E9B37D82}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementation", "Implementation", "{7FDEE182-EDEB-4D3F-BE9F-0E79121DFA32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL", "SimpleDAL.Abstraction\SimpleDAL.Abstraction.csproj", "{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Abstraction", "SimpleDAL.Abstraction\SimpleDAL.Abstraction.csproj", "{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLRepository", "SimpleDAL.MSSQLRepository\SimpleDAL.MSSQLRepository.csproj", "{E2C2649C-4254-4A5E-B192-F94307BF8FFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.MSSQLRepository", "SimpleDAL.MSSQLRepository\SimpleDAL.MSSQLRepository.csproj", "{E2C2649C-4254-4A5E-B192-F94307BF8FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLRepository.Tests", "SimpleDAL.MSSQLRepository.Tests\SimpleDAL.MSSQLRepository.Tests.csproj", "{9B825D89-4EA8-4608-9419-70D3FD9251C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.MSSQLRepository.Tests", "SimpleDAL.MSSQLRepository.Tests\SimpleDAL.MSSQLRepository.Tests.csproj", "{9B825D89-4EA8-4608-9419-70D3FD9251C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,14 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21AC5D54-881B-4423-BC03-84097F925F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21AC5D54-881B-4423-BC03-84097F925F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21AC5D54-881B-4423-BC03-84097F925F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21AC5D54-881B-4423-BC03-84097F925F3F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,11 +40,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1F5AEA3B-A4EF-41ED-B106-1B32C52DB285} = {6010AB90-0518-4008-B33D-DEB6847AB466}
 		{9B825D89-4EA8-4608-9419-70D3FD9251C1} = {6010AB90-0518-4008-B33D-DEB6847AB466}
 		{5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8} = {7FDEE182-EDEB-4D3F-BE9F-0E79121DFA32}
 		{8B69A9EC-A44C-4B5C-8B4D-6EA3A2232E3D} = {435D3FFE-DF88-4250-B557-FE11E9B37D82}
-		{21AC5D54-881B-4423-BC03-84097F925F3F} = {5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8}
 		{E2C2649C-4254-4A5E-B192-F94307BF8FFE} = {5F6F24CC-A3CE-44F4-A5BA-43B47D02F9E8}
 	EndGlobalSection
 EndGlobal
