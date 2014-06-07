@@ -41,13 +41,13 @@ namespace SimpleDAL.Helpers
             return resizedBuf;
         }
 
-        private static void FillArrayFromDifferentSizedArray<T>(T[] buf, T[] resizedBuf)
+        private static void FillArrayFromDifferentSizedArray<T>(T[] sourceBuf, T[] targetBuf)
         {
-            var endBufPos = buf.Length > resizedBuf.Length ? resizedBuf.Length : buf.Length;
+            var endBufPos = sourceBuf.Length > targetBuf.Length ? targetBuf.Length : sourceBuf.Length;
 
             for (int i = 0; i < endBufPos; ++i)
             {
-                resizedBuf[i] = buf[i];
+                targetBuf[i] = sourceBuf[i];
             }
         }
     }
