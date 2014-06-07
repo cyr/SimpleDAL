@@ -5,7 +5,7 @@ namespace SimpleDAL.Helpers
     [TestClass]
     public class ArrayReaderTests
     {
-        private const long LARGE_BUF_SIZE = 2048;
+        private const long LARGE_BUF_SIZE = 2000;
         private const long SMALL_BUF_SIZE = 2;
         private const long DEFAULT_BUF_SIZE = 1024;
 
@@ -56,16 +56,18 @@ namespace SimpleDAL.Helpers
             return testBuffer.Length;
         }
 
-        private static long CopyToArray<T>(long offset, T[] buf, T[] testBuffer)
+        private static long CopyToArray<T>(long offset, T[] sourceBuf, T[] targetBuf)
         {
-            if (offset >= testBuffer.Length)
+            if (offset >= targetBuf.Length)
                 return 0;
+
+            var endBufPos = sourceBuf.Length > targetBuf.Length ? targetBuf.Length : sourceBuf.Length;
 
             long i;
             long copiedElements = 0;
-            for (i = offset; i < buf.Length; ++i)
+            for (i = offset; i < endBufPos; ++i)
             {
-                buf[i] = testBuffer[i];
+                sourceBuf[i] = targetBuf[i];
                 ++copiedElements;
             }
             return copiedElements;
