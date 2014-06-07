@@ -9,7 +9,7 @@ namespace SimpleDAL.Database
     {
         private readonly List<MSSQLField> _fields;
 
-        public MSSQLRow(IEnumerable<MSSQLField> fields)
+        private MSSQLRow(IEnumerable<MSSQLField> fields)
         {
             _fields = fields.ToList();
         }

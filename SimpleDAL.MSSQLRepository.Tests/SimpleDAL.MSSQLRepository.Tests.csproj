@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Database\MSSQLRowTests.cs" />
     <Compile Include="Database\MSSQLDatabaseTests.cs" />
+    <Compile Include="Helpers\ArrayReaderTests.cs" />
     <Compile Include="MSSQLRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

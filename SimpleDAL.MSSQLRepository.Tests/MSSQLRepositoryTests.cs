@@ -41,7 +41,7 @@ namespace SimpleDAL
 
             repo.Single(s => true);
 
-            Assert.Fail("Single should throw exception, because source data contains more than one entry.");
+            Assert.Fail("Single should throw exception, source data contains more than one entry.");
         }
 
         [TestMethod]
